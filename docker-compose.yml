@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  staticWebsite:
+    image: jekyll/jekyll
+    environment:
+      - JEKYLL_ENV=development
+    ports:
+      - 35729:35729
+      - 4000:4000
+    command: bundle exec jekyll serve --watch --incremental --livereload --config _config.yml --host 0.0.0.0
+    volumes:
+      - ./alexandre-huet-developpement:/srv/jekyll
+      - ./vendor/bundle:/usr/local/bundle
