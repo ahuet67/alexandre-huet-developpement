@@ -1,11 +1,11 @@
 version: "3"
 
 services:
-  staticWebsite:
-    image: jekyll/jekyll
+  website:
+    image: jekyll/jekyll:3
     ports:
       - "4000:4000"
     command: jekyll serve
     volumes:
-      - ./alexandre-huet-developpement:/srv/jekyll:Z
+      - ./docs:/srv/jekyll:Z
       - ./vendor/bundle:/usr/local/bundle

@@ -9,8 +9,7 @@ Generate a static website as easily as possible
 ## Use this website
 
 - docker-compose up -d
-- docker-compose run --rm staticWebsite bash
-- bundle install
+- docker-compose run --rm staticWebsite bundle install
 
 ## Set up (to do only one time)
 
